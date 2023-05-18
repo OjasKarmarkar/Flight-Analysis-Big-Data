@@ -66,13 +66,6 @@ Kibana is a visualization tool that can explore the data stored in elasticsearch
 ![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/36037604/3bad2a7f-7e66-46a4-b63b-f0cf3c6b6659)
 
 
-## Contribution
-
-[Sirine Arfa](https://github.com/SirineArfa)
-
-[Mohamed Aziz Tmar](https://github.com/tmarmedaziz)
-
-
 
 
 
