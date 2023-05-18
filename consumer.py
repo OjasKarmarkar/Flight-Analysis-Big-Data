@@ -42,6 +42,16 @@ spark_conf.setAll(
     ]
 )
 
+mappings = {
+ "mappings": {            
+    "properties": {
+        "location": {
+                        "type": "geo_point"
+                    }
+    }
+}
+}
+
 def getrows(df, rownums=None):
     return df.rdd.zipWithIndex().map(lambda x: x[0])
 
@@ -64,13 +74,12 @@ if __name__ == "__main__":
     		hex = i[1].decode('utf-8')
 
     		dictio = eval(hex)
+    		es.indices.create(index='flight-realtime-project', body=mappings , ignore=400)
     		es.index(
                     index="flight-realtime-project",
                     doc_type="_doc",
                     body={
-		            "hex": dictio["hex"],
-		            "reg_number": dictio.get("reg_number" , None),
-		            "flag": dictio["flag"],
+		            "flag": dictio.get("flag" , None),
 		            "lat": dictio["lat"],
 		            "lng": dictio["lng"],
 		            "alt": dictio["alt"],
@@ -78,17 +87,15 @@ if __name__ == "__main__":
 		            "speed": dictio.get("speed" , None),
 		            "flight_number": dictio.get("flight_number" , None),
 		            "flight_icao": dictio.get('flight_icao' , None),
-		            "flight_iata": dictio.get('flight_iata' , None),
 		            "dep_icao": dictio.get('dep_icao' , None),
-		            "dep_iata": dictio.get('dep_iata' , None),
 		            "arr_icao": dictio.get('arr_icao' , None),
-		            "arr_iata": dictio.get('arr_iata' , None),
 		            "airline_icao": dictio.get('airline_icao' , None),
-		            "airline_iata": dictio.get('airline_iata' , None),
 		            "aircraft_icao": dictio.get('aircraft_icao' , None),
-		            "updated": dictio.get("updated" , None),
 		            "status": dictio.get("status" , None),
-		            
+		            "location": {
+        "lat": dictio["lat"],
+        "lon": dictio["lng"]
+    }
                     
                     }
                 )	
@@ -96,7 +103,7 @@ if __name__ == "__main__":
     query = df.writeStream \
     .format('console') \
     .foreachBatch(func_call) \
-    .outputMode('append') \
+    .trigger(processingTime="15 seconds") \
     .start().awaitTermination()
 
 
