@@ -3,11 +3,6 @@
 In this project, we will use a real-time flight tracking API, Apache Kafka, ElastichSearch and Kibana to create a real-time Flight-info data pipeline and track the flights in real-time. We will use a high-level architecture and
 corresponding configurations that will allow us to create this data pipeline. The end result will be a Kibana dashboard fetching real-time data from ElasticSearch.
 
-![a](https://user-images.githubusercontent.com/80635318/209438803-10e11a67-12c4-4dca-9a13-eeef20a1f8ce.PNG)
-
-![b](https://user-images.githubusercontent.com/80635318/209438806-ba08a62c-046c-4576-ad5b-322a34d57442.PNG)
-
-
 ## Pipeline
 Our project pipeline is as follows:
 
@@ -63,25 +58,13 @@ Kibana is a visualization tool that can explore the data stored in elasticsearch
 
 - Open http://localhost:5601/ in your browser.
 - Go to Management>Kibana>Saved Objects
-- Import Real-Time-Flight-Tracking-Project-Dashbord.ndjson
+- Import dashboard.ndjson
 - Open dashboard
 
 ## Final result
--  A Pie displaying Aircraft head direction(dir) vs Aircraft Registration Number(reg_nmber) & Real-Time Flight Tracking count number:
-![1](https://user-images.githubusercontent.com/80635318/209441421-a4139516-99f1-4ab1-97ec-a97440604207.PNG)
+![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/36037604/edbb0ff7-9cbb-4c37-9024-97d14bd706bf)
+![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/36037604/3bad2a7f-7e66-46a4-b63b-f0cf3c6b6659)
 
-- Vertical bar of Aircraft horizontal speed (km) vs 	Aircraft elevation (meters) & Vertical bar of Aircraft horizontal speed (km) vs 	Aircraft Geo-Latitude:
-![2](https://user-images.githubusercontent.com/80635318/209441588-6a249ae1-0f99-417c-a213-4f4972b8f394.PNG)
-
-- Horizontal bar showing the different Aircraft horizontal speed (km) & Heat map of Aircraft elevation (meters) vs Aircraft head direction :
-![3](https://user-images.githubusercontent.com/80635318/209441733-67d8be21-78c7-4f7a-af74-6cebca2af85e.PNG)
-
-- A Line that shows Aircraft horizontal speed (km) vs Aircraft Geo-Longitude:
-![4](https://user-images.githubusercontent.com/80635318/209441872-321a2cc6-2b63-4cba-97a2-4b11885a54ef.PNG)
-
-- A Map that geolocates in real time the different flights all over the world:
-
-![c](https://user-images.githubusercontent.com/80635318/209438812-508ad5b4-0df6-492a-8f36-90bc5af0013c.PNG)
 
 ## Contribution
 
