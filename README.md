@@ -6,7 +6,8 @@ corresponding configurations that will allow us to create this data pipeline. Th
 ## Pipeline
 Our project pipeline is as follows:
 
-![2](https://user-images.githubusercontent.com/80635318/209438588-6f71c44e-c24f-4e80-b8bd-e3168f9bf963.PNG)
+![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/91938852/478140eb-7804-4c2d-b878-b0e08d1cc08a)
+
 
 ## Prerequisites
 The following software should be installed on your machine in order to reproduice our work:
