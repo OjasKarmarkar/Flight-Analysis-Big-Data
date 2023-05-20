@@ -48,11 +48,11 @@ Kibana is a visualization tool that can explore the data stored in elasticsearch
 
 5. Run Kafka producer:
 
-`python3 ./real-time-flights-producer.py`
+`python3 ./producer.py`
 
 6. Run PySpark consumer with spark-submit:
 
-`spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,,org.elasticsearch:elasticsearch-spark-30_2.12:7.14.2 /home/sirine/Downloads/spark_consumer.py`
+`spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,org.elasticsearch:elasticsearch-spark-30_2.12:7.14.2 /consumer.py`
 
 ## How to launch kibana dashboard
 
