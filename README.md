@@ -6,8 +6,9 @@ corresponding configurations that will allow us to create this data pipeline. Th
 ## Pipeline
 Our project pipeline is as follows:
 
-![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/91938852/478140eb-7804-4c2d-b878-b0e08d1cc08a)
 
+
+![data_pipeline](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/91938852/21871293-9f38-427a-8c4b-e17daf26cb2d)
 
 ## Prerequisites
 The following software should be installed on your machine in order to reproduice our work:
@@ -63,12 +64,5 @@ Kibana is a visualization tool that can explore the data stored in elasticsearch
 - Open dashboard
 
 ## Final result
-![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/36037604/edbb0ff7-9cbb-4c37-9024-97d14bd706bf)
-![image](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/36037604/3bad2a7f-7e66-46a4-b63b-f0cf3c6b6659)
-
-
-
-
-
-
-
+![db1](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/91938852/d58b0e91-9734-417f-b53d-fc960fd9f8ce)
+![db2](https://github.com/OjasKarmarkar/Flight-Analysis-Big-Data/assets/91938852/9278ac3b-40d8-4d02-8d1c-becad9191973)
